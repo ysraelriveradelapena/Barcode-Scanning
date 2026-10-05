@@ -1,0 +1,38 @@
+@host = https://localhost:7262
+//@host = https://barcode.runasp.net
+
+### 1. Login
+POST {{host}}/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "scanner@example.com",
+  "password": "Scanner#12345"
+}
+
+### 2. Send a scan (paste the token from step 1)
+POST {{host}}/api/scans
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwODMyMGFhMy1kNWQ1LTQ2OTEtOWY1Ny0zOThmY2Q1NWRlOTgiLCJlbWFpbCI6InNjYW5uZXJAZXhhbXBsZS5jb20iLCJleHAiOjE3OTA5MjMwMzcsImlzcyI6IkJhcmNvZGVBcGkiLCJhdWQiOiJCYXJjb2RlQXBwIn0.Okn9ueHvLeWt4TFOKI03jk1WgQpAV5ppH_zoKVbP6oA
+Content-Type: application/json
+
+{
+  "clientScanId": "3f2b8c1e-9a4d-4c55-8f0e-1a2b3c4d5e6f",
+  "code": "4800016644801",
+  "format": "EAN13",
+  "scannedAt": "2026-10-02T08:30:00Z",
+  "storeCode": "S001",
+  "terminalCode": "T01"
+}
+
+### 3. See recent scans
+GET {{host}}/api/scans/recent
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwODMyMGFhMy1kNWQ1LTQ2OTEtOWY1Ny0zOThmY2Q1NWRlOTgiLCJlbWFpbCI6InNjYW5uZXJAZXhhbXBsZS5jb20iLCJleHAiOjE3OTA5MjMwMzcsImlzcyI6IkJhcmNvZGVBcGkiLCJhdWQiOiJCYXJjb2RlQXBwIn0.Okn9ueHvLeWt4TFOKI03jk1WgQpAV5ppH_zoKVbP6oA
+
+### Login, correct password
+POST {{host}}/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "scanner@example.com",
+  "password": "Scanner#12345"
+}

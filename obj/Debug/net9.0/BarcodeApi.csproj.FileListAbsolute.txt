@@ -180,6 +180,7 @@ F:\Codes\BarcodeApi\BarcodeApi\obj\Debug\net9.0\BarcodeApi.AssemblyInfo.cs
 F:\Codes\BarcodeApi\BarcodeApi\obj\Debug\net9.0\BarcodeApi.csproj.CoreCompileInputs.cache
 F:\Codes\BarcodeApi\BarcodeApi\obj\Debug\net9.0\BarcodeApi.MvcApplicationPartsAssemblyInfo.cs
 F:\Codes\BarcodeApi\BarcodeApi\obj\Debug\net9.0\BarcodeApi.MvcApplicationPartsAssemblyInfo.cache
+F:\Codes\BarcodeApi\BarcodeApi\obj\Debug\net9.0\BarcodeApi.sourcelink.json
 F:\Codes\BarcodeApi\BarcodeApi\obj\Debug\net9.0\rjimswa.dswa.cache.json
 F:\Codes\BarcodeApi\BarcodeApi\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
 F:\Codes\BarcodeApi\BarcodeApi\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json

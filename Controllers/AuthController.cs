@@ -1,4 +1,4 @@
-﻿using System.IdentityModel.Tokens.Jwt;
+using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using BarcodeApi.Models;
@@ -38,11 +38,13 @@ public class AuthController : ControllerBase
 
         await _users.ResetAccessFailedCountAsync(user);
 
-        var claims = new[]
+        var roles = await _users.GetRolesAsync(user);
+        var claims = new List<Claim>
         {
-            new Claim(JwtRegisteredClaimNames.Sub, user.Id),
-            new Claim(JwtRegisteredClaimNames.Email, user.Email ?? "")
+            new(JwtRegisteredClaimNames.Sub, user.Id),
+            new(JwtRegisteredClaimNames.Email, user.Email ?? "")
         };
+        claims.AddRange(roles.Select(r => new Claim("role", r)));
 
         var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]!));
         var expires = DateTime.UtcNow.AddHours(1);

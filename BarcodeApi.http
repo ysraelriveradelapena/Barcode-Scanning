@@ -1,5 +1,5 @@
-@host = https://localhost:7262
-//@host = https://barcode.runasp.net
+//@host = https://localhost:7262
+@host = https://barcode.runasp.net
 
 ### 1. Login
 POST {{host}}/api/auth/login
@@ -34,5 +34,5 @@ Content-Type: application/json
 
 {
   "email": "scanner@example.com",
-  "password": "Scanner#12345"
+  "password": "1"
 }

@@ -59,7 +59,7 @@ public class ScansController : ControllerBase
                 ClientScanId = req.ClientScanId,
                 Code = code,
                 Format = req.Format,
-                ScannedAtUtc = req.ScannedAt.ToUniversalTime(),
+                ScannedAtUtc = DateTime.UtcNow,
                 UserId = userId,
                 StoreId = terminal.StoreId,
                 TerminalId = terminal.Id
@@ -80,7 +80,7 @@ public class ScansController : ControllerBase
     }
 
     [HttpGet("recent")]
-    [Authorize(Roles = "Admin")]
+    [Authorize]
     public async Task<IActionResult> Recent()
     {
         var rows = await _db.Scans

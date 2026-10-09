@@ -196,3 +196,5 @@ F:\Codes\BarcodeApi\BarcodeApi\obj\Release\net9.0\BarcodeApi.pdb
 F:\Codes\BarcodeApi\BarcodeApi\obj\Release\net9.0\BarcodeApi.genruntimeconfig.cache
 F:\Codes\BarcodeApi\BarcodeApi\obj\Release\net9.0\ref\BarcodeApi.dll
 F:\Codes\BarcodeApi\BarcodeApi\obj\Release\net9.0\BarcodeApi.sourcelink.json
+F:\Codes\BarcodeApi\BarcodeApi\obj\Release\net9.0\BarcodeApi.RazorAssemblyInfo.cache
+F:\Codes\BarcodeApi\BarcodeApi\obj\Release\net9.0\BarcodeApi.RazorAssemblyInfo.cs

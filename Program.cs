@@ -86,7 +86,7 @@ builder.Services.AddAuthentication(options =>
 
 // ================= SERVICES =================
 builder.Services.AddAuthorization();
-builder.Services.AddControllers();
+builder.Services.AddControllersWithViews();
 
 // ================= BUILD =================
 var app = builder.Build();
@@ -111,5 +111,9 @@ app.UseAuthentication(); // 🔥 MUST be before Authorization
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Dashboard}/{action=Index}/{id?}");
 
 app.Run();
